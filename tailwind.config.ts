@@ -1,4 +1,6 @@
-import type { Config } from "tailwindcss";
+/** @format */
+
+import type {Config} from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -13,8 +15,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        opaquePulse: {
+          "0%, 50%": {transform: "scale(1)"},
+          "25%": {transform: "scale(1.13)"},
+        },
+      },
+      animation: {
+        battement: "opaquePulse 2s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

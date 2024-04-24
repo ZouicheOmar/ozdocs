@@ -1,29 +1,44 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* html {
+  font-size: 15px;
+} */
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #121113;
+    --primary-text: #b5b2bc;
+    --secondary-text: #797979;
+    --boder: #3a3a3a;
+    --accent: #0bd8b6;
+    --danger: #ff0000;
+    --white: #ffffff;
   }
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121113;
+    --primary-text: #b5b2bc;
+    --secondary-text: #797979;
+    --accent: #0bd8b6;
+    --danger: #ff0000;
+    --white: #ffffff;
+  }
+} */
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--primary-text);
+  background: var(--background);
+  font-size: 1rem;
 }
 
 @layer utilities {
