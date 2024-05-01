@@ -4,9 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html {
+html {
   font-size: 15px;
-} */
+  /* font-size: 0.875rem; */
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
