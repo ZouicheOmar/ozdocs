@@ -32,7 +32,7 @@ export default function Home() {
             <span>resume.pdf</span>
           </a>
           <MainSkills />
-          {/* <Projects /> */}
+          <Projects />
           <Education />
           <Skills />
           <ContactMe />

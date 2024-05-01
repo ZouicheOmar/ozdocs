@@ -11,8 +11,6 @@ import NavigateToArrowIcon from "./icons/navigateToArrowIcon"
 const inconsolate = Inconsolata({subsets: ["latin"], weight: "300"})
 
 export default function ProjectItem({project}) {
-  //manque stack
-  // const {name, etc...} = project
   const {display_name, repo_url, commits, description, stack} = project
   const [open, setOpen] = useState(false)
 

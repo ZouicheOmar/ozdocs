@@ -8,7 +8,6 @@ import {projects} from "@/utils/constants"
 
 export default async function Projects() {
   const detailedProjects = await getAllCommits(projects)
-  console.log(detailedProjects)
   return (
     <div className="space-y-[8px] select-none" id="projects">
       <SectionTitle className="font-semibold group space-x-[1px] hover:cursor-pointer max-w-fit">
