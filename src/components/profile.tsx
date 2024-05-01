@@ -11,7 +11,7 @@ export default function Profile() {
       <div className="relative w-[100px] ">
         <Image src={photo} alt="Me" quality={100} className="rounded-[12px]" />
         <span
-          className={`${jac.className} opacity-[0.01] hover:opacity-5 transition-opacity  select-none text-6xl absolute -top-[4px] left-[108px]  leading-[42px]  `}
+          className={`${jac.className} opacity-5  md:opacity-[0.01] hover:opacity-5 transition-opacity  select-none text-6xl absolute -top-[4px] left-[108px]  leading-[42px]  `}
         >
           oz Docs
         </span>

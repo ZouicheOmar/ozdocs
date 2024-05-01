@@ -26,12 +26,12 @@ export default function Navigation() {
               e.stopPropagation()
               setShow(false)
             }}
-            className="fixed backdrop-blur z-10 w-screen h-full top-0 left-0 animate-in fade-in-50  "
+            className="fixed backdrop-blur blurred-menu z-10 w-screen h-full top-0 left-0 animate-in fade-in-50  "
           />
         )}
       </AnimatePresence>
-      <div className="overflow-hidden z-20  md:hidden bg-[#121113] border-t-[#3a3a3a] border-t-[1px] w-full p-2 fixed bottom-0 left-0 ">
-        <div className="flex justify-end  p-2 ">
+      <div className="overflow-hidden z-20  md:hidden bg-[#121113] border-t-border/25 border-t-[1px] w-full p-2 fixed bottom-0 left-0 ">
+        <div className="flex justify-end p-1 px-2 ">
           <button
             className={`flex items-center gap-1 ${
               show && "text-white"
@@ -50,8 +50,8 @@ export default function Navigation() {
               animate={{opacity: 1, height: "fit-content"}}
               exit={{opacity: 0, height: 0}}
             >
-              <ul className="select-none space-y-2 p-2 pt-1 ">
-                <div className=" max-h-[0px] w-full border-t-[1px] border-[#3a3a3a]"></div>
+              <ul className="select-none space-y-4 p-2 pt-1 ">
+                {/* <div className=" max-h-[0px] w-full border-t-[1px] border-[#3a3a3a]"></div> */}
                 <li
                   className="active:text-white w-fit transition-colors"
                   onPointerDown={() => handlePointerDown("about")}
