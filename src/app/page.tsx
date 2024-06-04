@@ -27,7 +27,7 @@ export default function Home() {
           <a
             href="./CVozdocs.pdf"
             target="_blank"
-            className="group text-[#0BD8B6]/80 hover:text-[#0BD8B6] transition-colors cursor-pointer after:content-['↗'] after:pl-1 "
+            className="group dark:text-[#0BD8B6]/80 dark:hover:text-[#0BD8B6] transition-colors cursor-pointer after:content-['↗'] after:pl-1 "
           >
             <span>resume.pdf</span>
           </a>

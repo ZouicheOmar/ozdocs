@@ -12,7 +12,7 @@ export default function ContactMe() {
       <SectionTitle>Contact me</SectionTitle>
       <div className="flex flex-wrap justify-between">
         <a
-          className="after:content-['↗'] after:pl-1  hover:text-white transition-colors"
+          className="after:content-['↗'] after:pl-1  dark:hover:text-white transition-colors"
           href="mailto:zouiche.omar@gmail.com"
           target="_blank"
           referrerPolicy="no-referrer"
@@ -27,7 +27,7 @@ export default function ContactMe() {
       </div>
       <div className="flex flex-wrap justify-between">
         <a
-          className="after:content-['↗'] after:pl-1 hover:text-white transition-colors"
+          className="after:content-['↗'] after:pl-1 dark:hover:text-white transition-colors"
           href="https://www.linkedin.com/in/ZouicheOmar/"
           target="_blank"
         >

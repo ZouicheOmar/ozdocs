@@ -8,7 +8,7 @@ const inconsolate = Inconsolata({subsets: ["latin"], weight: "400"})
 const Trow = ({head, data, last}) => {
   return (
     <tr
-      className={`divide-x-[1px] divide-border  border-border ${
+      className={`divide-x-[1px] divide-border border-opacity-25 divide-opacity-25 border-border ${
         !last && "border-b-[1px]"
       } `}
     >

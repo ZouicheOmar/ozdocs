@@ -3,9 +3,9 @@ import SectionTitle from "./sectionTitle"
 
 function EducationItem({title, year, location}) {
   return (
-    <div className="border-bottom border-b-[#3A3A3A] border-dashed border-b-[1px] pb-[4px]">
+    <div className="border-bottom dark:border-b-[#3A3A3A] border-dashed border-b-[1px] pb-[4px]">
       <div className="w-full flex justify-between">
-        <span className="text-white ">{title}</span>
+        <span className="font-medium dark:font-normal dark:text-white ">{title}</span>
         <span>{year}</span>
       </div>
       <p className="leading-tight">{location}</p>

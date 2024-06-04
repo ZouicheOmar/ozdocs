@@ -11,7 +11,7 @@ export default function CopyToClipboard({display, value, className, type}) {
     <>
       <button
         className={twMerge(
-          `relative group  space-x-1 hover:text-white  transition-colors`,
+          `relative group  space-x-1 dark:hover:text-white  transition-colors`,
           className
         )}
         onPointerDown={async () => {

@@ -2,13 +2,13 @@
 
 export default function ColorsBadge() {
   const colors = [
+    "#ffffff",
     "#121113",
     "#b5b2bc",
     "#797979",
     "#3a3a3a",
     "#0bd8b6",
     "#ff0000",
-    "#ffffff",
   ]
   return (
     <>

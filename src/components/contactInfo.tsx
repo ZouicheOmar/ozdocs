@@ -9,13 +9,13 @@ export default function ContactInfo() {
         <CopyToClipboard
           display="zouiche.omar[at]gmail.com"
           value="zouiche.omar@gmail.com"
-          className="text-white"
+          className="dark:text-white"
           type="email"
         />
         <a
           href="./CVozdocs.pdf"
           target="_blank"
-          className="cursor-pointer text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
+          className="cursor-pointer dark:text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
         >
           resume.pdf
         </a>
@@ -23,7 +23,7 @@ export default function ContactInfo() {
       <div className="flex flex-col  w-fit">
         <span className="">Github</span>
         <a
-          className="cursor-pointer text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
+          className="cursor-pointer dark:text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
           href="https://github.com/ZouicheOmar/"
           target="_blank"
         >
@@ -33,7 +33,7 @@ export default function ContactInfo() {
       <div className="flex flex-col  w-fit">
         <span className="">Linkedin</span>
         <a
-          className="cursor-pointer text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
+          className="cursor-pointer dark:text-white after:content-['↗'] after:opacity-0 after:hover:opacity-100 after:transition-opacity"
           href="https://www.linkedin.com/in/ZouicheOmar/"
           target="_blank"
         >
@@ -42,7 +42,7 @@ export default function ContactInfo() {
       </div>
       <div className="flex flex-col  w-fit">
         <span className="">Location</span>
-        <span className="text-white">Toulouse</span>
+        <span className="dark:text-white">Toulouse</span>
       </div>
     </div>
   )

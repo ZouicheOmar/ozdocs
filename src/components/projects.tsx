@@ -14,11 +14,11 @@ export default async function Projects() {
         <a
           href="https://github.com/ZouicheOmar"
           target="_blank"
-          className="group-hover:text-white transition-colors duration-300 group-hover:underline "
+          className="dark:group-hover:text-white transition-colors duration-300 group-hover:underline "
         >
           Projects
         </a>
-        <NavigateToArrowIcon className="text-white w-[1.1rem] h-[1.1rem]  transition-all duration-300 group-hover:translate-x-[0.1rem] group-hover:-translate-y-[0.1rem]  " />
+        <NavigateToArrowIcon className="dark:text-white w-[1.1rem] h-[1.1rem]  transition-all duration-300 group-hover:translate-x-[0.1rem] group-hover:-translate-y-[0.1rem]  " />
       </SectionTitle>
       <div className="space-y-[16px]">
         {Object.keys(detailedProjects).map((key, index) => (
