@@ -30,16 +30,16 @@ export default function Navigation() {
           />
         )}
       </AnimatePresence>
-      <div className="overflow-hidden z-20  md:hidden bg-[#121113] border-t-border/25 border-t-[1px] w-full p-2 fixed bottom-0 left-0 ">
+      <div className="overflow-hidden z-20  md:hidden bg-white dark:bg-[#121113] border-t-2 dark:border-t-border/25 dark:border-t-[1px] w-full p-2 fixed bottom-0 left-0 ">
         <div className="flex justify-end p-1 px-2 ">
           <button
             className={`flex items-center gap-1 ${
-              show && "text-white"
+              show && "dark:text-white"
             } transition-colors duration-300`}
             onPointerDown={() => setShow(!show)}
           >
             <span className="">Navigation</span>
-            {show ? <CrossIcon /> : <HamburgerMenuIcon className="stretch " />}
+            {show ? <CrossIcon /> : <HamburgerMenuIcon className="stretch" />}
           </button>
         </div>
         <AnimatePresence>
