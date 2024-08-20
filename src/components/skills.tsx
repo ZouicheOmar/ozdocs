@@ -2,15 +2,14 @@
 
 import SectionTitle from "./sectionTitle"
 
-import {Inconsolata} from "next/font/google"
-const inconsolate = Inconsolata({subsets: ["latin"], weight: "400"})
+import { Inconsolata } from "next/font/google"
+const inconsolate = Inconsolata({ subsets: ["latin"], weight: "400" })
 
-const Trow = ({head, data, last}) => {
+const Trow = ({ head, data, last }) => {
   return (
     <tr
-      className={`divide-x-[1px] divide-border border-opacity-25 divide-opacity-25 border-border ${
-        !last && "border-b-[1px]"
-      } `}
+      className={`divide-x-[1px] divide-border border-opacity-25 divide-opacity-25 border-border ${!last && "border-b-[1px]"
+        } `}
     >
       <th className={`pr-2 text-start  ${inconsolate.className}`}>{head}</th>
       <td className="pl-2">{data}</td>
@@ -19,11 +18,10 @@ const Trow = ({head, data, last}) => {
 }
 
 const SKILLS = {
-  Frontend: ["React", "Next.js", "Typescript"],
-  Backend: ["Node.js", "Python", "MongoDB", "Serverless"],
-  Design: ["Figma", "TailwindCSS"],
-  Tools: ["Git", "Linux environments"],
-  Learning: ["Test Driven Developpement, Typing, Accessibility"],
+  Frontend: ["React", "Next.js", "Typescript", "Three.js"],
+  Backend: ["Node.js", "Python", "Java", "SQL", "MongoDB"],
+  Design: ["Figma", "TailwindCSS", "Blender"],
+  Tools: ["Git", "GNU/Linux", "NeoVim"],
 }
 
 export default function Skills() {

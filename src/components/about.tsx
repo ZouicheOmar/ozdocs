@@ -11,11 +11,11 @@ export default function About() {
         <p>
           <i className="font-light">Background</i> : I graduated with a degree
           in mathematics from the University of Montpellier. During my Masters,
-          I found myself completely engaged in a OOP class, directing all my
+          I found myself completely engaged in a C++ class, directing all my
           efforts into it whilst leaving the rest. Which led to web development.
         </p>
         <p>
-          <i className="font-light">Autodidact </i>: The library was already my
+          <i className="font-light">Self-taught </i>: The univesity library was already my
           second home. The majority of my time was spent studying, problem
           solving or discussing math with friends.
         </p>

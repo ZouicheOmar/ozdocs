@@ -1,7 +1,7 @@
 /** @format */
 import SectionTitle from "./sectionTitle"
 
-function EducationItem({title, year, location}) {
+function EducationItem({ title, year, location }) {
   return (
     <div className="border-bottom dark:border-b-[#3A3A3A] border-dashed border-b-[1px] pb-[4px]">
       <div className="w-full flex justify-between">
@@ -34,9 +34,9 @@ export default function Education() {
           location="Facuté des Sciences - Université de Montpellier"
         />
         <EducationItem
-          title="Developpement Web"
+          title="Bachelor in Web Application Developement"
           year="Current"
-          location="OpenClassrooms"
+          location="HETIC"
         />
       </div>
     </div>

@@ -2,11 +2,13 @@
 
 import SectionTitle from "./sectionTitle"
 
+// "Backend: Experienced in serverless applications using Node.js or Python.",
+
 const mainsSkills = [
   "Fluent in French and English",
-  "Frontend: React and  Typescript for creating responsive and dynamic UIs.",
-  "Backend: Experienced in serverless applications using Node.js or Python.",
-  "Programming: JavaScript and Python, foundation in logic and problem solving.",
+  "Frontend: React and Typescript for creating responsive and dynamic UIs, ThreeJS for more attractivness.",
+  "Backend: RESTful APIs, Serverless.. using Node.js, Python and Java",
+  "Programming: JavaScript, Python and C, foundation in logic, data structures and problem solving.",
   "Social: Great communication, confortable in a team or working solo.",
 ]
 

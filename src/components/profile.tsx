@@ -1,9 +1,9 @@
 /** @format */
 import photo from "../../public/photo.png"
 import Image from "next/image"
-import {Jacquard_24} from "next/font/google"
+import { Jacquard_24 } from "next/font/google"
 
-const jac = Jacquard_24({subsets: ["latin"], weight: "400"})
+const jac = Jacquard_24({ subsets: ["latin"], weight: "400" })
 
 export default function Profile() {
   return (
