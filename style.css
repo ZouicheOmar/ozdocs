@@ -1,15 +1,13 @@
 :root {
   --black: rgba(15, 15, 15, 1.00);
-  /* --blue-bottom : #082F49; */
-  /* --blue-top : #004C7E; */
   --blue-bottom : #031B2C;
   --blue-top : #082F49;
   --grey: #1e293b;
   --white: rgba(251, 251, 251, 0.87);
   --dark-cyan: #020617;
 
-  background: linear-gradient(#082F49, #031B2C);
-  color: var(--white);
+  /* background: linear-gradient(#082F49, #031B2C); */
+  /* color: var(--white); */
 
   font-family: sans-serif;
   font-synthesis: none;
@@ -24,54 +22,15 @@
 }
 
 body {
-  margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  padding: 4rem auto 4rem auto;
-}
-
-#container{
-  max-width : 560px;
-  margin: 0 auto;
-  padding-top : 4rem;
-  padding-bottom : 4rem;
-}
-
-#page-illustration{
-  position : relative;
-  margin: 0 auto;
-  max-width : 480px;
-  height : 100vh; 
-  background: url(./public/Frame.png) 0% 0% / contain no-repeat;
-  background-position: center;
-}
-
-#page-text-content {
-  margin: 0 auto 4rem auto;
-  max-width : 600px;
-  padding : 0 2rem 0 2rem
+  background: linear-gradient(#082F49, #031B2C);
+  color: var(--white);
 }
 
 hr {
   margin-top : 1rem;
   opacity : 0.25;
-}
-
-.page-text-entry {
-  margin-top : 1rem;
-}
-
-.page-text-entry > ul {
-  padding-left: 1.5rem;
-}
-
-.list-entry-year {
-  opacity : 0.5;
-  margin-right : 2rem;
-}
-
-.secondary-text {
-  opacity : 0.5;
 }
 
 a {
@@ -101,6 +60,45 @@ p {
 h4 {
   font-weight : 500;
   opacity : 0.75;
+}
+
+#container{
+  max-width : 560px;
+  margin: 0 auto;
+  padding-top : 4rem;
+  padding-bottom : 4rem;
+}
+
+#page-illustration{
+  position : relative;
+  margin: 0 auto;
+  max-width : 480px;
+  height : 100vh; 
+  background: url(./public/Frame.png) 0% 0% / contain no-repeat;
+  background-position: center;
+}
+
+#page-text-content {
+  margin: 0 auto 4rem auto;
+  max-width : 600px;
+  padding : 0 2rem 0 2rem
+}
+
+.page-text-entry {
+  margin-top : 1rem;
+}
+
+.page-text-entry > ul {
+  padding-left: 1.5rem;
+}
+
+.list-entry-year {
+  opacity : 0.5;
+  margin-right : 2rem;
+}
+
+.secondary-text {
+  opacity : 0.5;
 }
 
 #resume, #email {
