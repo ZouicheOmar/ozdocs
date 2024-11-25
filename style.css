@@ -1,7 +1,18 @@
+@font-face {
+  font-family: "Averia Serif Libre";
+  src: url("public/AveriaSerifLibre-Regular.woff") format("woff");
+}
+
+* {
+  margin : 0;
+  padding : 0;
+}
+
+
 :root {
-  font-family: sans-serif;
-  font-synthesis: none;
-  font-size : 15px;
+  font-family: "Averia Serif Libre", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,9 +25,10 @@
   --dark-cyan: #020617;
 }
 
-* {
-  margin : 0;
-  padding : 0;
+@media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -24,6 +36,9 @@ body {
   min-height: 100vh;
   background: linear-gradient(var(--blue-top), var(--blue-bottom));
   color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 hr {
@@ -61,10 +76,8 @@ h4 {
 }
 
 #container{
-  max-width : 560px;
-  margin: 0 auto;
-  padding-top : 4rem;
-  padding-bottom : 4rem;
+  max-width : 700px;
+  max-height: fit-content;
 }
 
 #page-illustration{
