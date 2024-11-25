@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Averia Serif Libre";
-  src: url("public/AveriaSerifLibre-Regular.woff") format("woff");
+  src: url("./public/AveriaSerifLibre-Regular.woff") format("woff");
 }
 
 * {
