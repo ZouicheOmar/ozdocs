@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Averia Serif Libre";
-  src: url("./public/AveriaSerifLibre-Regular.woff") format("woff");
+  font-family: "Inter";
+  src: url("./public/fonts/InterVariable.woff2") format("woff");
 }
 
 * {
@@ -8,66 +8,72 @@
   padding : 0;
 }
 
-
 :root {
-  font-family: "Averia Serif Libre", serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
+  font-size: 125%;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.3;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --black: rgba(15, 15, 15, 1.00);
-  --blue-bottom : #031B2C;
-  --blue-top : #082F49;
-  --grey: #1e293b;
-  --white: rgba(251, 251, 251, 0.87);
-  --dark-cyan: #020617;
+  --off-white: #fdfbfb;
+  --off-black: rgba(0, 0, 0, 0.8)
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
   :root {
     font-size: 14px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .banner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+  }
+
+  .banner > img {
+    max-width: 160px;
+    max-height: 160px;
+    width: 160px;
+    height: 160px;
   }
 }
 
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  background: linear-gradient(var(--blue-top), var(--blue-bottom));
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+html, body {
+  background-color: var(--off-white) ;
 }
 
-hr {
-  margin-top : 1rem;
-  opacity : 0.25;
+body > div {
+  margin: auto;
+  padding: 3rem 0 5rem 0;
+  max-width: 40rem;
 }
 
 a {
-  text-decoration : none;
-  color : var(--white);
+  color: inherit;
+  text-decoration: underline;
+  transition-property: color, background-color, text-decoration;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
-.list-entry-text{
-  text-wrap: wrap;
+a:hover {
+  background-color: var(--off-black);
+  text-decoration: none;
+  color: var(--off-white);
 }
 
-li {
-  width : 100%;
-  display: flex;
-  margin-top: 4px;
-}
-
-ul {
-  list-style-type: none;
-  list-style-position: inside;
-}
-
-p {
-  margin-top : 4px;
+h3 {
+  padding: 0.20rem 0.4rem;
+  margin: 2rem 0 1rem 0;
+  max-width: 35%;
+  background-color: var(--off-black);
+  color: var(--off-white);
 }
 
 h4 {
@@ -75,55 +81,52 @@ h4 {
   opacity : 0.75;
 }
 
-#container{
-  max-width : 700px;
-  max-height: fit-content;
+p {
+  margin : 1rem 0;
 }
 
-#page-illustration{
-  position : relative;
-  margin: 0 auto;
-  max-width : 400px;
-  height : 100vh; 
-  background: url(./public/Frame.png) 0% 0% / contain no-repeat;
-  background-position: center;
+.banner {
+  display: flex;
+  gap: 2rem;
+  font-size: 130%;
 }
 
-#page-text-content {
-  margin: 0 auto 4rem auto;
-  max-width : 600px;
-  padding : 0 2rem 0 2rem
+.banner > img {
+  max-width: 300px;
+  border-radius: 4px;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.page-text-entry {
-  margin-top : 1rem;
+.info {
+  padding: 1rem 0.5rem;
+  flex-grow: 1;
 }
 
-.page-text-entry > ul {
-  padding-left: 1.5rem;
+.info-contact {
+  margin-top: 1rem;
 }
 
-.list-entry-year {
-  opacity : 0.5;
-  margin-right : 2rem;
-}
-
-.secondary-text {
-  opacity : 0.5;
-}
-
-#resume, #email {
-  padding : 2px 4px;
-  background-color : var(--white);
-  color : var(--blue-top);
-  max-width : fit-content;
-  cursor: pointer;
-  transition-property: color, background-color;
+.info-contact > a {
+  display: block;
+  padding: 2px 4px;
+  transition-property: color, background-color, text-decoration;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration : 100ms;
+  transition-duration: 150ms;
 }
 
-#resume:hover, #email:hover {
-  background-color: unset;
-  color: var(--white);
+.sec-entry{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
+
+.sec-entry > span {
+  width: 3rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.sec-entry > div > span:last-child {
+  width: 3rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
