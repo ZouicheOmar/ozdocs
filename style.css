@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 html,
 body,
 div,
@@ -15,126 +17,42 @@ a {
   vertical-align: baseline;
 }
 
-@font-face {
-  font-family: Inter;
-  src: url(public/fonts/Inter-Regular.woff2) format("woff2");
-  font-style: regular;
-}
-
-@font-face {
-  font-family: IM Fell English;
-  src: url(public/fonts/IMFellEnglish-Italic.ttf);
-  font-style: italic;
-}
 
 :root {
-  font-family: Arial, Inter, sans-serif;
-  font-optical-sizing: auto;
+  font-family: Roboto, sans-serif;
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.9);
-  letter-spacing: 0.01ch;
-  text-rendering: optimizeLegibility;
-  line-height: 1.2;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* color-scheme: light dark; */
+  /* background: rgb(5, 10, 16); */
+  /* color: rgb(234, 236, 240, 0.7); */
+  /* text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px; */
 
-  --off-white: #fdfbfb;
-  --off-black: rgba(0, 0, 0, 0.8);
+
+  font-smooth: auto;
+  font-optical-sizing: auto;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+
   --img-w: 300px;
 }
 
-html {
-  background: none;
-}
-
-
 body {
-  position: relative;
-  margin: auto;
-  padding-top: 1rem;
-  max-width: 540px;
+  margin: 4rem auto;
+  padding: 1rem;
+  max-width: 600px;
 
-  @media (max-width: 700px) {
-    padding-top: 3rem;
-  }
-}
+  border: 1px dashed black;
 
-p {
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+
+  /* display: grid; */
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
 }
 
 body>div {
-  padding: 0.5rem 1rem;
-  margin: 0 0 1rem 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a,
-summary {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition-property: color, background-color, text-decoration;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-a:hover,
-summary:hover {
-  background-color: var(--off-black);
-  text-decoration: none;
-  color: var(--off-white);
-}
-
-h3,
-summary {
-  font-size: 90%;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  margin-bottom: 0.25rem;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-summary {
-  list-style: none;
-  width: fit-content;
-  cursor: pointer;
-
-  &::after {
-    content: '>';
-    text-decoration: none;
-  }
-}
-
-ul {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-
-.title {
-  z-index: -1;
-  position: absolute;
-  letter-spacing: 2px;
-  top: 0;
-  left: 50%;
-  right: 0;
-  font-family: IM Fell English, serif;
-  font-style: italic;
-  transform: translate(-8%, -10%);
-  font-size: 5rem;
-  font-weight: 700;
-  /* color: rgba(0, 0, 0, 0.15); */
-  color: #D9D9D9;
-
-  @media (max-width: 700px) {
-    transform: translate(-40%, -20%);
-  }
+  border: 1px dashed black;
 }
 
 .banner {
@@ -143,62 +61,8 @@ ul {
   align-items: end;
 }
 
-.img {
-  background-color: rgba(255, 255, 255, 1);
-  width: 150px;
-  height: fit-content;
-  padding: 0.5rem;
-  overflow: hidden;
-  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.25);
-  transform: rotate(-2deg);
-
-}
-
-.info-name {
-  margin-bottom: 1rem;
-}
-
-.info-name>h2 {
-  font-size: 120%;
-  font-weight: bold;
-}
-
-.info-contact {
-  a {
-    display: block;
-  }
-}
-
 .sec-entry {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 0.5rem;
-}
-
-.sec-entry_school {
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.sec-entry_year {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-div:has(details) {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-details {
-  &::details-content {
-    opacity: 0;
-    block-size: 0;
-    overflow-y: clip;
-    transition: content-visibility 500ms allow-discrete, opacity 500ms, block-size 500ms;
-  }
-
-  &[open]::details-content {
-    opacity: 1;
-    block-size: auto;
-  }
 }
