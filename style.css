@@ -1,4 +1,28 @@
-@import './fonts.css';
+@font-face {
+  font-family: "Roboto Flex Text";
+  src: url("./public/robotoflex_variablefont.ttf") format("truetype");
+  font-optical-sizing: auto;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 80,
+    "GRAD" 0;
+  font-smooth: auto;
+  font-optical-sizing: auto;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("./public/robotoflex_variablefont.ttf") format("truetype");
+  font-optical-sizing: auto;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 25,
+    "GRAD" -200;
+}
 
 html,
 body,
@@ -15,54 +39,204 @@ a {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  margin-block: 0;
+}
+
+:root {
+  --teal1: #004c4c;
+  --teal2: #006666;
+  --orange: #ff6600;
+
+  --blue-bg: midnightblue;
+  --blue-fg: #ffffe6e0;
+  --blue-fg-second: #ffffff66;
+
+  --border-col: #0000001a;
+  --bg: #ffffff;
+  --fg: #4d4d4d;
+
+  --acme-bg: #ffffeb;
+
+  --nav-bg: #000000;
+  --nav-fg: #ededed;
+
+  --img-w: 300px;
+  --sec-padding: 16px;
+  --sec-gap: 16px;
+
+  font-family: "Roboto Flex Text", sans-serif;
+  font-size: 15px;
+
+  color: var(--fg);
+  background-color: white;
+  color-scheme: light;
+}
+
+ul {
+  margin-block: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0 0 32px 0;
+  box-sizing: content-box;
+
+  img {
+    border: 1px solid var(--border-col);
+    margin-top: 4px;
+  }
 }
 
 
-:root {
-  font-family: Roboto, sans-serif;
-  font-size: 15px;
-  /* color-scheme: light dark; */
-  /* background: rgb(5, 10, 16); */
-  /* color: rgb(234, 236, 240, 0.7); */
-  /* text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px; */
+a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
 
+h1,
+h2 {
+  font-size: 120%;
+}
 
-  font-smooth: auto;
-  font-optical-sizing: auto;
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
+h3 {
+  min-width: 50px;
 
-  --img-w: 300px;
+  @media (min-width: 400px) {
+    min-width: 80px;
+  }
 }
 
 body {
-  margin: 4rem auto;
-  padding: 1rem;
-  max-width: 600px;
+  margin: 8px auto;
+  overflow: auto;
 
-  border: 1px dashed black;
+  @media (min-width: 400px) {
+    max-width: 575px;
+  }
+
+}
+
+main {
+  width: calc(100% - 0.4rem);
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+
+  @media (min-width: 570px) {
+    width: 100%;
+  }
+}
+
+#banner {
+  color: black;
+  background-color: var(--orange);
+  border: none;
+
+  margin: 0;
+  padding: 0 var(--sec-padding);
+
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 20pt;
+}
+
+#content {
+  max-width: 100%;
+}
+
+#navigation {
+  display: flex;
+  gap: var(--sec-gap);
+  padding: 4px var(--sec-padding);
+  background-color: var(--nav-bg);
+  color: var(--nav-fg);
+
+  a {
+    text-decoration: none;
+    min-width: 80px;
+  }
+
+  div>a {
+    margin-right: 8px;
+  }
+}
+
+.sec {
+  padding: var(--sec-padding);
+  min-height: calc(192px - 1rem);
 
   display: flex;
   flex-direction: column;
+  gap: var(--sec-gap);
 
-  /* display: grid; */
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  border: 1px solid var(--border-col);
+  border-bottom: none;
+
+  background-color: var(--acme-bg);
+
+  ul {
+    padding: 0;
+  }
+
+  @media (min-width: 400px) {
+    flex-direction: row;
+  }
 }
 
-body>div {
-  border: 1px dashed black;
+.sec:is(.about) {
+  flex-direction: column;
+  gap: 0;
+  min-height: 192px;
+  padding: 0;
+
+  background-color: var(--blue-bg);
+  color: var(--blue-fg);
+
+  div {
+    min-height: 80px;
+    padding: var(--sec-padding);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    @media (min-width: 400px) {
+      flex-direction: row;
+    }
+  }
+
+  a,
+  h3 {
+    padding-top: 0;
+    color: rgba(255, 255, 255, 1.0);
+  }
+
+  a {
+    text-decoration-color: var(--blue-fg-second);
+  }
 }
 
-.banner {
+.sec:is(.files) {
+  height: 80px;
+}
+
+.sec:last-child {
+  border-bottom: 1px solid var(--border-col);
+}
+
+
+footer {
+  height: 80px;
+  padding: 8px;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: end;
   align-items: end;
-}
+  gap: 2px;
 
-.sec-entry {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 0.5rem;
+  a {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
 }
